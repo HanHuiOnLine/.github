@@ -7,18 +7,18 @@ name: CI
 on:
  push:
    branches:
-   - master
+   - main
 
 jobs:
   build-qq-ci: #job名称
-    uses: octo-org/another-repo/.github/workflows/workflow-2.yml@v1
+    uses: HanHuiOnline/.github/workflow-templates/qqGame_hlxx.yml@main
     runs-on: ubuntu-latest #运行环境
 
     steps:
     
 #第一步：获取小程序源码
     - name: Checkout 
-      uses: actions/checkout@master
+      uses: HanHuiOnline/qqGame_hlxxz@main
       
 #第二步：上传小程序版本到管理端，并将此版本设置为体验版（设置体验版可选）
     - name: Build 
